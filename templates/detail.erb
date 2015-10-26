@@ -1,0 +1,13 @@
+<section>
+  <h3>The sale of this product is restricted within 500 feet of Chicago schools.</h3>
+  <ul>
+    <li>Effective date of the restriction is: <strong class="info"><%= Date.parse(@product[:effective_date]).strftime("%m/%d/%Y") %></strong></li>
+    <li>You entered: <strong class="info"><%= @product[:upc] %></strong></li>
+    <li>This is a <strong class="info"><%= @product[:brand] %> <%= @product[:product] %></strong></li>
+    <li>The Chicago Department of Public Health has determined this product has <strong class="info">“<%= @product[:flavor] %>”</strong> as a characterizing flavor.</li>
+  </ul>
+
+  <p>If you disagree with the classification of this product as a flavored tobacco product, you may appeal in writing. The Department of Public Health will respond within fifteen (15) days of receiving the appeal. Written appeals, including supporting documentation, should be addressed to: Chicago Department of Public Health, 333 S. State Street, 2nd Floor, Chicago, Illinois 60604.</p>
+
+  <p>Retailers are advised to abide by the law until their appeal is settled.</p>
+</section>

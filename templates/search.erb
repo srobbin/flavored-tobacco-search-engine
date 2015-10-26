@@ -1,0 +1,29 @@
+<h3 style="font-weight: normal">Search results for <strong><%= @query %></strong>:</h3>
+
+<% if @results.size > 0 %>
+  <table class="table table-results table-striped table-hover">
+    <thead>
+      <tr>
+        <th>UPC</th>
+        <th>Brand</th>
+        <th>Product</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @results.each do |result| %>
+      <tr>
+        <td><%= result[:upc] %></td>
+        <td><%= result[:brand] %></td>
+        <td><%= result[:product] %></td>
+        <td><a href="/detail/<%= result[:upc] %>">View Details</a></td>
+      </tr>  
+    <% end %>
+    </tbody>
+  </table>
+<% else %>
+    <p>No results were found. Please, double check to ensure you entered the correct search query.</p>
+
+    <p>To receive a complete copy of the Chicago Department of Public Health's updated list of flavored tobacco products, please email <a href="mailto:healthychicago@cityofchicago.org">healthychicago@cityofchicago.org</a>.</p>
+  </section>
+<% end %>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">    
+  <title>Flavored Tobacco Search Engine | Chicago Department of Public Health</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link href="/stylesheets/app.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="index">
+  <header class="container">
+    <a href="/">
+      <img alt="Healthy Chicago logo" src="/images/logo.png" />
+      <div>Flavored Tobacco Search Engine</div>
+    </a>
+  </header>
+
+  <div class="main container">
+    <form action="/search">
+      <input id="q" name="q" type="text" placeholder="Search for a flavor, UPC, etc..."><br>
+      <small>Please enter a valid UPC code</small>
+      <input type="submit" value="Search"><br>
+    </form>
+
+    <%= yield %>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/javascripts/app.js"></script>
+  </div>
+</body>
+</html>
