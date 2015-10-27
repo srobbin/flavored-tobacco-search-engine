@@ -2,7 +2,6 @@
   <h3>The sale of this product is restricted within 500 feet of Chicago schools.</h3>
   <ul>
     <li>Effective date of the restriction is: <strong class="info"><%= Date.parse(@product[:effective_date]).strftime("%m/%d/%Y") %></strong></li>
-    <li>You entered: <strong class="info"><%= @product[:upc] %></strong></li>
     <li>This is a <strong class="info"><%= @product[:brand] %> <%= @product[:product] %></strong></li>
     <li>The Chicago Department of Public Health has determined this product has <strong class="info">“<%= @product[:flavor] %>”</strong> as a characterizing flavor.</li>
   </ul>
