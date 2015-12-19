@@ -6,7 +6,7 @@
       <tr>
         <th>Brand</th>
         <th>Product</th>
-        <th>Details</th>
+        <th>Flavor</th>
       </tr>
     </thead>
     <tbody>
@@ -14,7 +14,7 @@
       <tr>
         <td><%= result[:brand] %></td>
         <td><%= result[:product] %></td>
-        <td><a href="/detail/<%= result[:upc] %>">View Details</a></td>
+        <td><%= result[:flavor] %></td>
       </tr>  
     <% end %>
     </tbody>
