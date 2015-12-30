@@ -25,14 +25,11 @@ end
 get '/search' do
   @query = params['q']
   @results = portal.get settings.dataset, {"$q" => @query}
-  if @results.length == 1
-    redirect to("/detail/#{@results.first[:upc]}")
-  else
-    erb :search
-  end
+  erb :search
 end
 
-get '/detail/:upc' do
-  @product = portal.get(settings.dataset, {"UPC" => params[:upc]}).first
-  erb :detail
-end
+# UPC no longer exists
+# get '/detail/:upc' do
+#   @product = portal.get(settings.dataset, {"UPC" => params[:upc]}).first
+#   erb :detail
+# end

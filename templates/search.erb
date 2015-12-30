@@ -7,6 +7,8 @@
         <th>Brand</th>
         <th>Product</th>
         <th>Flavor</th>
+        <th>Detail</th>
+        <th>Published Date</th>
       </tr>
     </thead>
     <tbody>
@@ -15,6 +17,8 @@
         <td><%= result[:brand] %></td>
         <td><%= result[:product] %></td>
         <td><%= result[:flavor] %></td>
+        <td><%= result[:detail] %></td>
+        <td><%= Date.parse(result[:published_date]).strftime('%m/%d/%Y') rescue nil %></td>
       </tr>  
     <% end %>
     </tbody>
@@ -22,6 +26,6 @@
 <% else %>
     <p>No results were found. Please, double check to ensure you entered the correct search query.</p>
 
-    <p>To receive a complete copy of the Chicago Department of Public Health's updated list of flavored tobacco products, please email <a href="mailto:healthychicago@cityofchicago.org">healthychicago@cityofchicago.org</a>.</p>
+    <p>If you cannot find a particular product on this list or if you have any questions, contact: <a href="mailto:flavoredtobacco@cityofchicago.org">flavoredtobacco@cityofchicago.org</a>.</p>
   </section>
 <% end %>
